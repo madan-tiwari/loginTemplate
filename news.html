@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>News</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/dashboard.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		body {
+		  margin: 0;
+		  font-family: "Lato", sans-serif;
+		}
+		
+		.sidebar {
+		  margin: 80px 20px;
+		  padding: 0;
+		  width: 230px;
+		  border-radius: 10px;
+		  background-color: #ff2d2d;
+		  position: fixed;
+		  height: 100%;
+		  overflow: auto;
+		}
+		
+		.sidebar a {
+		  display: block;
+		  color: rgb(242, 226, 226);
+		  padding: 16px;
+		  text-decoration: none;
+		}
+		 
+		.sidebar a.active {
+		  background-color: #ff0000;
+		  color: white;
+		}
+		
+		.sidebar a:hover:not(.active) {
+		  background-color: #555;
+		  color: white;
+		}
+		
+		div.content {
+		  margin-left: 280px;
+		  padding: 1px 16px;
+		  height: 650px;
+		}
+		
+		@media screen and (max-width: 700px) {
+		  .sidebar {
+			width: 100%;
+			height: auto;
+			position: relative;
+		  }
+		  .sidebar a {float: left;}
+		  div.content {margin-left: 0;}
+		}
+		
+		@media screen and (max-width: 400px) {
+		  .sidebar a {
+			text-align: center;
+			float: none;
+		  }
+		}
+		</style>
+</head>
+
+<body>	
+	<div class="sidebar">
+		<a href="dashboard.html">Home</a>
+		<a class="active" href="news.html">News</a>
+		<a href="contact.html">Contact</a>
+		<a href="about.html">About</a>
+	  </div>
+      <div class="content" style="border: 1px solid red;">
+		<div class="container p-3 my-3 bg-dark text-white">
+            <h1>This is news</h1>
+            <p>Some news here</p>
+          </div>
+	  </div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

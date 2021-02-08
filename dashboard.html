@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Dashboard</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/dashboard.ico"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		body {
+		  margin: 0;
+		  font-family: "Lato", sans-serif;	
+		}
+		
+		.sidebar {
+		  margin: 80px 20px;
+		  padding: 0;
+		  width: 230px;
+		  border-radius: 10px;
+		  background-color: #ff2d2d;
+		  position: fixed;
+		  height: 100%;
+		  overflow: auto;
+		}
+		
+		.sidebar a {
+		  display: block;
+		  color: rgb(242, 226, 226);
+		  padding: 16px;
+		  text-decoration: none;
+		}
+		 
+		.sidebar a.active {
+		  background-color: #ff0000;
+		  color: white;
+		}
+		
+		.sidebar a:hover:not(.active) {
+		  background-color: #555;
+		  color: white;
+		}
+		
+		div.content {
+		  margin-left: 280px;
+		  padding: 1px 16px;
+		  height: 650px;
+		  border: 1px solid red;
+		}
+		
+		@media screen and (max-width: 700px) {
+		  .sidebar {
+			width: 100%;
+			height: auto;
+			position: relative;
+		  }
+		  .sidebar a {float: left;}
+		  div.content {margin-left: 0;}
+		}
+		
+		@media screen and (max-width: 400px) {
+		  .sidebar a {
+			text-align: center;
+			float: none;
+		  }
+		}
+		</style>
+</head>
+
+<body>	
+	<div class="sidebar">
+		<a class="active" href="dashboard.html">Home</a>
+		<a href="news.html">News</a>
+		<a href="contact.html">Contact</a>
+		<a href="about.html">About</a>
+		<a href="#" data-toggle="modal" data-target="#myModal">Logout</a>
+
+	</div>
+	  
+<div class="content">
+	<form class="form-inline" action="dashboard.html" style="margin-left:700px" >
+		<input class="form-control mr-sm-2" type="text" placeholder="Search">
+		<button class="btn btn-danger" type="submit">Search</button>
+	</form>	
+	 <div class="row">
+		<div class="center-block"> <iframe src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FKathmandu&amp;title=Holiday%20Calender&amp;showPrint=0&amp;showTabs=0&amp;src=ZW4ubnAjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23D50000&amp;showTz=0&amp;showNav=1" style="border-width:0" width="600" height="500" frameborder="0" scrolling="no"></iframe></div>
+
+	<div class="center-block" style="margin-left: 80px; margin-top: 40px;"><h2>Upcoming Birthday</h2>       
+		<table class="table table-hover">
+		  <thead class="thead-dark">
+			<tr>
+			  <th>Name</th>
+			  <th>Date</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>Arjun Thapa</td>
+			  <td>2021-2-14</td>
+			</tr>
+			<tr>
+				<td>Sital Pandey</td>
+				<td>2021-2-15</td>
+			</tr>
+			<tr>
+				<td>Hari Aryal</td>
+				<td>2021-2-18</td>
+			</tr>
+			<tr>
+				<td>Arjun Magar</td>
+				<td>2021-2-20</td>
+			</tr>
+		  </tbody>
+		</table>
+	</div>
+</div>
+
+</div>
+
+		  
+	  
+	  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+		  <div class="modal-content">
+			<div class="modal-header">
+				
+			  <h4>Log Out <i class="fa fa-lock"></i></h4>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			</div>
+			<div class="modal-body">
+			  <p><i class="fa fa-question-circle"></i> Are you sure you want to log-out? <br /></p>
+			  <div class="actionsBtns">
+				  <form action="index.html" method="POST">
+					  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+					  <input type="submit" class="btn btn-default btn-primary" data-dismiss="#" value="Logout" />
+						  <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </form>
+			  </div>
+			</div>
+		  </div>
+		  </div>
+		  </div>
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
