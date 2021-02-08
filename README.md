@@ -1,6 +1,7 @@
 # loginTemplate
 
- <b>login and dashboard template</b>
+ <b>login and dashboard template</b> </br>
+ <i>open index.html file first</i>
 <pre>
 -modal login form
 -login validation
