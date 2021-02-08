@@ -1,7 +1,7 @@
 # loginTemplate
 
  <b>login and dashboard template</b>
-
+<pre>
 -modal login form
 -login validation
       -input fields should not be empty
@@ -13,4 +13,5 @@
 -upcoming birthday
 -search bar
 -logout
+</pre>
 
